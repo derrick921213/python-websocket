@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Websocket網頁JS示範</title>
+        <script type="text/javascript">
+            function WebSocketTest()
+            {
+                var ws = new WebSocket("ws://127.0.0.1:4200")
+                ws.onopen = function()
+                {
+                    ws.send("This is a test meg");
+                    alert("數據發送中:\n這是測試");
+                };
+                
+
+            };
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
