@@ -12,12 +12,19 @@
                     ws.send("This is a test meg");
                     alert("數據發送中:\n這是測試");
                 };
-                
-
-            };
+                ws.onmessage = function(evt)
+                {
+                    var received_msg = evt.data;
+                    alert("數據已接收:\n" + received_msg);
+                    ws.close();
+                };
+                ws.onclose = function(){alert("連接已關閉");};
+            }
         </script>
     </head>
     <body>
-
+        <div id="sse">
+            <a href="javascript:WebSockettest()">運行WebSocket</a>
+        </div>
     </body>
 </html>
