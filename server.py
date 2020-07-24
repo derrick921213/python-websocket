@@ -1,6 +1,6 @@
 from websocket_server import WebsocketServer
 import sys
-sys.setdefaultencoding('utf-8')
+#sys.setdefaultencoding('utf-8')
 def new_client(client,server):
     print("Client(%d) has joined."% client['id'])
 def client_left(client,server):
